@@ -37,11 +37,12 @@
   --mb-2: 2rem;
   --mb-2-5: 2.5rem;
   --mb-3: 3rem;
+
+  /* Z-index */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
 }
-/* z index */
---z-tooltip: 10;
---z-fixed: 100;
---z-modal: 1000;
 
 @media screen and (max-width: 992px) {
   :root {
@@ -54,18 +55,19 @@
     --smaller-font-size: 0.75rem;
   }
 }
+
 /* base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 body,
-buttton,
+button,
 input,
 textarea {
   font-family: var(--body-font);
@@ -77,24 +79,87 @@ body {
   background-color: var(--body-color);
 }
 
-h1, h2,h3 {
-    color : var(--title-color);
-    font-weight: var(--font-semi-bold);
+h1, h2, h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
 }
 
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
+
 button {
   cursor: pointer;
   border: none;
   outline: none;
 }
+
 img {
   max-width: 100%;
   height: auto;
-}   
+}
+
+.section {
+  padding: 6rem 0 2rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: 4rem;
+}
+
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+
+.container {
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--title-color);
+  color: var(--container-color);
+  padding: 1.25rem 2rem;
+  border-radius: 1rem;
+  font-weight: var(--font-medium);
+}
+
+.button:hover {
+  background-color: var(--title-color-dark);
+}
+
+.button__icon {
+  margin-right: 0.5rem;
+}
+
+.button--flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 992px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 576px) {}
+
+@media screen and (max-width: 350px) {}
