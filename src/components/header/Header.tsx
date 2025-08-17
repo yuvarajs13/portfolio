@@ -18,9 +18,9 @@ const Header = () => {
         <div className={`nav__menu ${menuOpen ? 'show-menu' : ''}`}>
           <ul className="nav__list">
             <li className="nav__item"><a href="#home" className="nav__link" onClick={closeMenu}>Home</a></li>
-            <li className="nav__item"><a href="#about" className="nav__link" onClick={closeMenu}>About</a></li>
             <li className="nav__item"><a href="#skills" className="nav__link" onClick={closeMenu}>Skills</a></li>
             <li className="nav__item"><a href="#projects" className="nav__link" onClick={closeMenu}>Projects</a></li>
+            <li className="nav__item"><a href="#about" className="nav__link" onClick={closeMenu}>About</a></li>
           </ul>
 
           {/* Close Icon */}
