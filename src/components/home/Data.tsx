@@ -8,6 +8,7 @@ function Data() {
         </h1>
         <h3 className="home__subtitle">Full Stack Developer </h3>
         <p className="home__description">Building applications with integrity, precision, and passion.</p>
+    
     </div>
   )
 }
