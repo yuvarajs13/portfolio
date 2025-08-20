@@ -5,22 +5,29 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
-
   const closeMenu = () => setMenuOpen(false);
 
   return (
     <header className="header">
       <nav className="nav container">
         {/* Logo */}
-        <a href="index.html" className="nav__logo">Yuvaraj</a>
+        <a href="#home" className="nav__logo">Yuvaraj</a>
 
         {/* Navigation Menu */}
         <div className={`nav__menu ${menuOpen ? 'show-menu' : ''}`}>
           <ul className="nav__list">
-            <li className="nav__item"><a href="#home" className="nav__link" onClick={closeMenu}>Home</a></li>
-            <li className="nav__item"><a href="#skills" className="nav__link" onClick={closeMenu}>Skills</a></li>
-            <li className="nav__item"><a href="#projects" className="nav__link" onClick={closeMenu}>Projects</a></li>
-            <li className="nav__item"><a href="#about" className="nav__link" onClick={closeMenu}>About</a></li>
+            <li className="nav__item">
+              <a href="#home" className="nav__link" onClick={closeMenu}>Home</a>
+            </li>
+            <li className="nav__item">
+              <a href="#skills" className="nav__link" onClick={closeMenu}>Skills</a>
+            </li>
+            <li className="nav__item">
+              <a href="#projects" className="nav__link" onClick={closeMenu}>Projects</a>
+            </li>
+            <li className="nav__item">
+              <a href="#about" className="nav__link" onClick={closeMenu}>About</a>
+            </li>
           </ul>
 
           {/* Close Icon */}
@@ -29,7 +36,7 @@ const Header = () => {
           )}
         </div>
 
-        {/* Toggle Icon (hamburger) — hidden when menu is open */}
+        {/* Hamburger Icon (only mobile) */}
         {!menuOpen && (
           <div className="toggle" onClick={toggleMenu}>
             <i className="uil uil-apps"></i>
