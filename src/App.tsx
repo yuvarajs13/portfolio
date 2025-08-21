@@ -1,22 +1,19 @@
 import React from 'react';
-import './App.css';
 import Header from './components/header/Header';
 import Home from './components/home/Home';
-import Skills from './components/skills/skills';
 import Projects from './components/projects/projects';
-import About from './components/about/about';
+import Skills from './components/skills/skills';
 import Footer from './components/footer/footer';
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <>
       <Header />
-      <main className='main'>
-      <Home />
+      <main className="main">
+        <Home />
+        <Projects />
+        <Skills />
       </main>
-      <Skills />
-      <Projects />
-      <About />
       <Footer />
     </>
   );

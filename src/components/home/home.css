@@ -82,7 +82,7 @@
 
 .home__social a:hover {
     color: var(--first-color-alt);
-    transform: scale(1.2);
+    
 }
 
 /* Tablet adjustments */
