@@ -63,7 +63,7 @@
 }
 
 .button:hover {
-    background-color: var(--first-color-alt);
+    background-color: hsl(var(--hue), var(--sat), 46%);
 }
 
 /* Social Icons */

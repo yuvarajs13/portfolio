@@ -31,7 +31,7 @@
 }
 
 .nav__logo:hover {
-    color: #6c63ff; /* accent color */
+    color: hsl(var(--hue), var(--sat), 46%); /* accent color */
 }
 
 /* Desktop Menu */
@@ -63,7 +63,7 @@
     height: 2px;
     left: 0;
     bottom: -4px;
-    background: linear-gradient(90deg, #6c63ff, #a362ea);
+    background: linear-gradient(90deg, hsl(var(--hue), var(--sat), 46%), hsl(var(--hue), var(--sat), 36%));
     transition: width 0.3s ease;
 }
 
@@ -72,7 +72,7 @@
 }
 
 .nav__link:hover {
-    color: #6c63ff;
+    color: hsl(var(--hue), var(--sat), 46%);;
 }
 
 /* Toggle icon hidden on desktop */
