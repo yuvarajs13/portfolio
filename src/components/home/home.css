@@ -13,10 +13,6 @@
     align-items: center;
 }
 
-/* Home Data */
-.home__data {
-    grid-column: 2;
-}
 
 /* Typography with fluid sizing */
 .home__title {
@@ -47,10 +43,23 @@
     cursor: pointer;
     text-decoration: none;
     transition: 0.3s;
+    overflow: hidden;
 }
 
 .button:hover {
     background-color: hsl(var(--hue), var(--sat), 46%);
+}
+
+.button__icon {
+    margin-left: 0.5rem;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover .button__icon {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* Social Icons */
@@ -120,13 +129,13 @@
 
     .home__data {
         order: 1;
+        text-align: center;
     }
 
     .home__social {
-        padding-top: 0;
-        padding-left: 0;
-        flex-direction: row;
+        display: flex;
         justify-content: center;
+        column-gap: 1.25rem;
         order: 2;
     }
 }

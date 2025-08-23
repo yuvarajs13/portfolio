@@ -1,5 +1,5 @@
 .projects {
-  background: #f8f9fa;
+  background: var(--body-color);
   padding: 4rem 1rem 1rem 1rem;
   margin-left: 1rem;
     margin-top: clamp(5rem, 10vw, 15rem);
@@ -16,8 +16,8 @@
 .chip {
   padding: 0.65rem 1.1rem;
   border-radius: 999px;
-  border: 2px solid #000;
-  background: #fff;
+  border: 2px solid var(--title-color);
+  background: var(--container-color);
   color: var(--title-color);
   font-weight: 600;
   transition: 0.2s;
@@ -28,9 +28,9 @@
   transform: translateY(-2px);
 }
 .chip.is-active {
-  background: hsl(var(--hue), var(--sat), 46%);
-  border-color: #000;
-  --text-color: #fff;
+  background: var(--accent);
+  border-color: var(--title-color);
+  color: var(--container-color);
 }
 .projects__grid {
   display: grid;
@@ -42,7 +42,7 @@
 }
 
 .card {
-  background: #fff;
+  background: var(--container-color);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.07);
@@ -94,9 +94,11 @@
   margin-top: 0.8rem;
 }
 .tag {
-  background: #eef2ff;
-  color: #3730a3;
+  background: var(--text-color);
+  color: var(--body-color);
   border-radius: 999px;
+  border-color: black;
+  border-width: 2px;
   padding: 0.3rem 0.7rem;
   font-weight: 600;
   font-size: 0.85rem;

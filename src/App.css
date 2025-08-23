@@ -11,6 +11,9 @@
   --body-color: hsl(var(--hue), var(--sat), 98%);
   --container-color: #fff;
 
+  --accent: hsl(var(--hue), var(--sat), 46%);
+  --accent-2: hsl(var(--hue), var(--sat), 36%);
+
   --body-font: 'Poppins', sans-serif;
 
   /* Font sizes */

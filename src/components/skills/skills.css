@@ -1,6 +1,6 @@
 .skills-section {
   padding: 4rem 1rem;
-  background: #f8f9fa;
+  background: var(--body-color);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -58,7 +58,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 16px;
-  background: #fff;
+  background: var(--container-color);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.07);
   padding: 12px;
 }
