@@ -1,7 +1,8 @@
 .projects {
   background: #f8f9fa;
-  padding: 4rem 1rem;
+  padding: 4rem 1rem 1rem 1rem;
   margin-left: 1rem;
+    margin-top: clamp(5rem, 10vw, 15rem);
 }
 
 .projects__filters {
@@ -27,9 +28,9 @@
   transform: translateY(-2px);
 }
 .chip.is-active {
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  border-color: hsl(var(--hue), var(--sat), 46%);
-  --text-color: hsl(var(--hue), var(--sat), 46%);
+  background: hsl(var(--hue), var(--sat), 46%);
+  border-color: #000;
+  --text-color: #fff;
 }
 .projects__grid {
   display: grid;

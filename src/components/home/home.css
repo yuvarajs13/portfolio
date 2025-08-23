@@ -1,34 +1,21 @@
 /* Home Container */
 .home__container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
+    min-height: auto;
     position: relative;
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
     box-sizing: border-box;
 }
 
-/* Wrapper for content */
 .home__content {
-    display: flex;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 0.5fr 3fr;
+    padding-top: 1.5rem;
     align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    text-align: left;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 /* Home Data */
 .home__data {
-    max-width: 500px;
-    position: relative;
-    transform: translate(
-        clamp(5%, 8vw, 10%),  /* X-axis: slight right shift */
-        clamp(-180px, 20vw, -180px))
+    grid-column: 2;
 }
 
 /* Typography with fluid sizing */
@@ -68,33 +55,54 @@
 
 /* Social Icons */
 .home__social {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-right: 2rem;
+    display: grid;
+    grid-template-columns: max-content;
+    row-gap: 1rem;
 }
 
 .home__social a {
-    color: var(--first-color);
+    color: var(--title-color);
     font-size: 1.5rem;
-    transition: color 0.3s, transform 0.3s;
+    transition: color 0.3s, transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 }
 
+/* Enhanced Hover Effect */
 .home__social a:hover {
-    color: var(--first-color-alt);
-    
+    color: #fff;
+    background-color: var(--title-color);
+    transform: translateY(-4px) scale(1.15);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Different hover colors for specific social platforms */
+.home__social a.facebook:hover {
+    background-color: #1877f2;
+}
+.home__social a.twitter:hover {
+    background-color: #1da1f2;
+}
+.home__social a.instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+.home__social a.linkedin:hover {
+    background-color: #0a66c2;
 }
 
 /* Tablet adjustments */
 @media screen and (max-width: 1024px) {
+    .home__content {
+        grid-template-columns: 0.5fr 3fr;
+    }
+
     .home__social {
         margin-right: 1rem;
         gap: 1rem;
-    }
-
-    .home__content {
-        padding: 0 1rem;
-        justify-content: flex-start;
     }
 }
 
@@ -105,35 +113,26 @@
         position: relative;
     }
     
-    .home__data {
-        transform: translate(0, 0);
-    }
-    
     .home__content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 1.5rem;
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
     }
 
-    /* Social icons fixed at bottom on mobile */
+    .home__data {
+        order: 1;
+    }
+
     .home__social {
-        position: fixed;
-        bottom: 20px;
-        left: 0;
-        right: 0;
+        padding-top: 0;
+        padding-left: 0;
         flex-direction: row;
         justify-content: center;
-        margin: 0;
-        padding: 10px;
-        z-index: 60;
-        backdrop-filter: blur(5px);
+        order: 2;
     }
 }
 
 /* Small mobile */
 @media screen and (max-width: 480px) {
-    
     .home__social {
         bottom: 15px;
     }
@@ -141,5 +140,4 @@
     .home__social a {
         font-size: 1.3rem;
     }
-
 }

@@ -51,9 +51,32 @@ const Skills: React.FC = () => {
     { 
       name: 'Next.js', 
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-          <path fill="black" d="M64 0c35.3 0 64 28.7 64 64s-28.7 64-64 64S0 99.3 0 64 28.7 0 64 0zm10.1 98.3V67.4l-25.9 30.9h-8.3V46.6h8.3v30.9l25.9-30.9h8.3v51.7h-8.3z"/>
-        </svg>
+        <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 180 180"
+    >
+      <mask id="a" maskUnits="userSpaceOnUse" x="0" y="0" width="180" height="180">
+        <circle cx="90" cy="90" r="90" fill="#fff" />
+      </mask>
+      <g mask="url(#a)">
+        <circle cx="90" cy="90" r="90" fill="#000" />
+        <path
+          fill="url(#b)"
+          d="M149.508 157.52L69.335 54H54v71.963h12.195V69.298l72.85 94.222a90.27 90.27 0 0010.463-6z"
+        />
+        <path fill="url(#c)" d="M115 54h12v72h-12z" />
+      </g>
+      <defs>
+        <linearGradient id="b" x1="109" y1="116.5" x2="144.5" y2="160" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#fff" stopOpacity="0" />
+        </linearGradient>
+        <linearGradient id="c" x1="121" y1="54" x2="120.799" y2="106.875" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#fff" stopOpacity="0" />
+        </linearGradient>
+      </defs>
+    </svg>
       )
     },
     { 
@@ -68,7 +91,7 @@ const Skills: React.FC = () => {
   ];
 
   return (
-    <section className="skills-section">
+    <section className="skills-section" id="skills">
       <div className="skills-container">
         <h2 className="skills-title">Tech Stack I'm currently working on</h2>
         <div className="skills-grid">
