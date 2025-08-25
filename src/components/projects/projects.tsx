@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+
+import portfolio from "../../assets/images/portfolio.png";
+import reading_ai from"../../assets/images/reading_ai.png"
 import "./projects.css";
 
 interface Project {
@@ -8,8 +11,6 @@ interface Project {
   category: "web" | "app";
   technologies: string[];
   image: string;
-  liveLink?: string;
-  githubLink?: string;
 }
 
 const Projects: React.FC = () => {
@@ -17,26 +18,23 @@ const Projects: React.FC = () => {
 
   const projectsData: Project[] = [
     {
-      id: 3,
+      id: 1,
       title: "Portfolio Website",
       description:
-        "A responsive portfolio website showcasing projects and skills with modern design principles.",
+        "Developed a fully responsive personal portfolio using React and TypeScript, featuring reusable components, smooth navigation, and optimized performance.",
       category: "web",
-      technologies: ["React", "TypeScript", "CSS3"],
-      image: "/project-images/portfolio.jpg",
-      liveLink: "#",
-      githubLink: "#",
+      technologies: ["React", "TypeScript"],
+      image: portfolio,
     },
     {
-      id: 4,
-      title: "Food Delivery App",
-      description: "Mobile application for ordering food with real-time tracking.",
+      id: 2,
+      title: "Reading AI App",
+      description: "Implemented clean, modular frontend components with React Native, ensuring cross-platform performance and accessibility.",
       category: "app",
-      technologies: ["React Native", "Firebase", "Google Maps API"],
-      image: "/project-images/food-delivery.jpg",
-      liveLink: "#",
-      githubLink: "#",
+      technologies: ["React Native"],
+      image: reading_ai,
     },
+
   ];
 
   const categories = [
@@ -78,26 +76,8 @@ const Projects: React.FC = () => {
               <div className="card__media">
                 <img src={project.image} alt={project.title} loading="lazy" />
                 <div className="card__overlay">
-                  {project.liveLink && (
-                    <a
-                      className="button"
-                      href={project.liveLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Live
-                    </a>
-                  )}
-                  {project.githubLink && (
-                    <a
-                      className="button button--ghost"
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Code
-                    </a>
-                  )}
+                    
+             
                 </div>
               </div>
               <div className="card__body">

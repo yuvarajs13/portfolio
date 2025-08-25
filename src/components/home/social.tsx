@@ -11,7 +11,7 @@ const Social: React.FC = () => {
                 </svg>
               </a>
       <a
-        href="https://linkedin.com/in/yuvarajs13"
+        href="https://linkedin.com/in/yuvaraj-s-223489343"
         className="social__icon"
         target="_blank"
         rel="noreferrer"

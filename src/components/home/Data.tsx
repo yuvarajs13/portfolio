@@ -6,9 +6,10 @@ function Data() {
       <h1 className="home__title">YUVARAJ</h1>
       <h3 className="home__subtitle">App Developer</h3>
       <p className="home__description">
-        Building applications with integrity, precision, and passion.
+        Transforming ideas into responsive, scalable applications.<br />
+        Specialized in React, TypeScript, and React Native.
       </p>
-      <a href="#" className="button button__flex">
+      <a href="mailto:yuvaraj93600@gmail.com"className="button button__flex">
         Say Hello
         <svg
           xmlns="http://www.w3.org/2000/svg"
